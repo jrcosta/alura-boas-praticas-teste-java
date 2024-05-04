@@ -15,7 +15,7 @@ jobs:
       db:
         image: mysql:5.7
         env:
-          MYSQL_ROOT_PASSWORD: password
+          MYSQL_ROOT_PASSWORD: delta1992
           MYSQL_DATABASE: adopet
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=10
         ports:
