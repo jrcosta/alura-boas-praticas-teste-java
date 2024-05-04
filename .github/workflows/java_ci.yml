@@ -36,3 +36,10 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       - name: Test with Maven
         run: mvn test
+      - name: Publish to Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          file: ./target/site/jacoco/jacoco.xml
+          flags: unittests
+          name: codecov-umbrella
+          fail_ci_if_error: true
